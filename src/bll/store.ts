@@ -7,14 +7,19 @@ import thunkMiddleware, { ThunkAction, ThunkDispatch } from "redux-thunk";
 import { appReducer } from "./appReducer";
 import { AppActionsType } from "./appActions";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import {
+  FeatureTemplateActionsType,
+  templateReducer,
+} from "../features/feature_template";
 
 const rootReducer = combineReducers({
   app: appReducer,
+  template: templateReducer,
   //add other reducers
 });
 
 export type AppRootStateType = ReturnType<typeof rootReducer>;
-export type AllActionsType = AppActionsType;
+export type AllActionsType = AppActionsType | FeatureTemplateActionsType;
 //add other ActionsTypes
 
 export const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
