@@ -10,11 +10,9 @@ export const TestComponent: React.FC = () => {
     <div>
       {JSON.stringify(as)}
       <div>
-        <button onClick={() => d(setAppErrorAC("setAppErrorAC"))}>
-          setAppErrorAC
-        </button>
+        <button onClick={() => d(setAppErrorAC("setAppErrorAC"))}>Error</button>
         <button onClick={() => d(setAppStatusAC(RequestStatusType.loading))}>
-          setAppErrorAC
+          Status
         </button>
       </div>
     </div>
