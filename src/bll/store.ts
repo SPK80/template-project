@@ -10,7 +10,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import {
   FeatureTemplateActionsType,
   templateReducer,
-} from "../features/feature_template";
+} from "features/feature_template";
 
 const rootReducer = combineReducers({
   app: appReducer,
